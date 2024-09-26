@@ -15,11 +15,19 @@ import shoe5 from './shoe5.svg'
 import shoe6 from './shoe6.svg'
 import shoe7 from './shoe7.svg'
 import shoe8 from './shoe8.svg'
+import mastercard from './mastercard.png'
+import paypal from './paypal.png'
+import rupay from './rupay.png'
+import visa from './visa.png'
+import abdul from './abdul.png'
 
 import thumbnailBackground from './thumbnail-background.svg'
 import thumbnailShoe1 from './thumbnail-shoe1.svg'
 import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
+
+import lost from './lost.png'
+
 
 export {
     bigShoe1,
@@ -42,5 +50,13 @@ export {
     thumbnailBackground,
     thumbnailShoe1,
     thumbnailShoe2,
-    thumbnailShoe3
+    thumbnailShoe3,
+
+    mastercard,
+    paypal,
+    rupay,
+    visa, 
+
+    abdul,
+    lost
 }

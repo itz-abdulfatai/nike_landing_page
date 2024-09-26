@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import { shoe8 } from "../assets/images";
 import { Button } from "../components";
 
 const SuperQuality = () => {
   return (
     <section
-      id='about-us'
+      // id='about'
       className='flex justify-between items-center max-lg:flex-col gap-10 w-full max-container'
     >
       <div className='flex flex-1 flex-col'>
@@ -19,10 +20,12 @@ const SuperQuality = () => {
           quality, innovation, and a touch of elegance.
         </p>
         <p className='mt-6 lg:max-w-lg info-text'>
-          Our dedication to detail and excellence ensures your satisfaction
+          Lets cut the crap. this section talks about me. click the link below to see more...
         </p>
         <div className='mt-11'>
+          <Link to='/about'>
           <Button label='View details' />
+          </Link>
         </div>
       </div>
 

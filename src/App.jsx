@@ -1,45 +1,34 @@
+import { Route, Routes } from "react-router-dom";
 import { Nav } from "./components";
-import {
-  CustomerReviews,
-  Footer,
-  Hero,
-  PopularProducts,
-  Services,
-  SpecialOffer,
-  Subscribe,
-  SuperQuality,
-} from "./sections";
+import { Footer } from "./sections";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Products from "./pages/Products";
+import SingleProduct from "./pages/SingleProduct";
+import Checkout from "./pages/Checkout";
+import ScrollToTop from "./components/ScrollToTop";
+import About from "./pages/About";
 
-const App = () => {
+function App() {
   return (
-    <main className='relative'>
+    <div >
       <Nav />
-      <section className='xl:padding-l wide:padding-r padding-b'>
-        <Hero />
-      </section>
-      <section className='padding'>
-        <PopularProducts />
-      </section>
-      <section className='padding'>
-        <SuperQuality />
-      </section>
-      <section className='padding-x py-10'>
-        <Services />
-      </section>
-      <section className='padding'>
-        <SpecialOffer />
-      </section>
-      <section className='bg-pale-blue padding'>
-        <CustomerReviews />
-      </section>
-      <section className='padding-x sm:py-32 py-16 w-full'>
-        <Subscribe />
-      </section>
-      <section className=' bg-black padding-x padding-t pb-8'>
+
+        <ScrollToTop/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products/>} />
+        <Route path="/products/:name" element={<SingleProduct />} />
+        <Route path="/checkout"  element={<Checkout />} />
+        <Route path="/about"  element={<About />} />
+        <Route path="*"  element={<NotFound />} />
+      </Routes>
+
+      <section className=" bg-black padding-x padding-t pb-8">
         <Footer />
       </section>
-    </main>
+    </div>
   );
-};
+}
 
 export default App;
